@@ -8,6 +8,8 @@ export class Search extends Component {
 
   static propTypes = {
     searchUsers: PropTypes.func.isRequired,
+    clearUsers: PropTypes.func.isRequired,
+    users: PropTypes.array.isRequired,
   };
 
   onChange = (e) => {
@@ -23,6 +25,7 @@ export class Search extends Component {
   };
 
   render() {
+    const { clearUsers, users } = this.props;
     return (
       <div>
         <form onSubmit={this.onSubmit} className='form'>
@@ -33,12 +36,26 @@ export class Search extends Component {
             value={this.state.text}
             onChange={this.onChange}
           />
-          <input
-            type='submit'
-            value='Search'
-            className='btn btn-dark btn-block'
-          />
+          {this.state.text === '' ? (
+            <input
+              type='submit'
+              value='Search'
+              className='btn btn-dark btn-block'
+              disabled
+            />
+          ) : (
+            <input
+              type='submit'
+              value='Search'
+              className='btn btn-dark btn-block'
+            />
+          )}
         </form>
+        {users.length !== 0 && (
+          <button className='btn btn-light btn-block' onClick={clearUsers}>
+            Clear
+          </button>
+        )}
       </div>
     );
   }

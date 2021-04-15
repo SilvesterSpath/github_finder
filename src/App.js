@@ -38,13 +38,27 @@ class App extends Component {
     console.log(text);
   };
 
+  // clear users from state
+  clearUsers = () => {
+    this.setState({
+      users: [],
+      loading: false,
+    });
+  };
+
   render() {
+    const { users, loading } = this.state;
+
     return (
       <div className='App'>
         <Navbar />
         <div className='container'>
-          <Search searchUsers={this.searchUsers} />
-          <Users loading={this.state.loading} users={this.state.users} />
+          <Search
+            users={users}
+            searchUsers={this.searchUsers}
+            clearUsers={this.clearUsers}
+          />
+          <Users loading={loading} users={users} />
         </div>
       </div>
     );
