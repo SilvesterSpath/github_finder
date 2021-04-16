@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 import Users from './components/Users';
 import Search from './components/Search';
+import Alert from './components/Alert';
 import axios from 'axios';
 
 class App extends Component {
   state = {
     users: [],
     loading: false,
+    alert: null,
   };
 
   /*   async componentDidMount() {
@@ -46,17 +48,27 @@ class App extends Component {
     });
   };
 
+  setAlert = (message, type) => {
+    this.setState({
+      alert: { message: message, type: type },
+    });
+
+    setTimeout(() => this.setState({ alert: null }), 3000);
+  };
+
   render() {
-    const { users, loading } = this.state;
+    const { users, loading, alert } = this.state;
 
     return (
       <div className='App'>
         <Navbar />
         <div className='container'>
+          <Alert alert={alert} />
           <Search
             users={users}
             searchUsers={this.searchUsers}
             clearUsers={this.clearUsers}
+            setAlert={this.setAlert}
           />
           <Users loading={loading} users={users} />
         </div>
