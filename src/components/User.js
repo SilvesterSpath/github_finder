@@ -21,8 +21,6 @@ export class User extends Component {
   render() {
     const {
       name,
-      avatar,
-      url,
       location,
       company,
       bio,

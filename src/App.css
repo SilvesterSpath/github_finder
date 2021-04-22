@@ -18,9 +18,14 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
-  background-color: rgb(194, 187, 187);
+  height: 100vh;
+  background-image: linear-gradient(180deg, #293832, #b3bbb8);
+  background-color: rgb(179, 187, 184);
   color: #333;
+}
+
+.about {
+  color: rgb(224, 233, 231);
 }
 
 a {
@@ -249,7 +254,7 @@ img {
 .bg-primary,
 .badge-primary,
 .alert-primary {
-  background: var(--primary-color);
+  background: rgb(37, 37, 39);
   color: #fff;
 }
 
