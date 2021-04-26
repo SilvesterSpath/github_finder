@@ -10,11 +10,7 @@ const Navbar = ({ icon, title }) => {
       </h1>
       <ul>
         <li>
-<<<<<<< HEAD
-          <Link to='https://silvesterspath.github.io/github_finder'>Home</Link>
-=======
           <Link to='https://silvesterspath.github.io/github_finder/'>Home</Link>
->>>>>>> b0874684dcc078bbaef14adde39cff3ea301e1da
         </li>
         <li>
           <Link to='/about'>About</Link>
