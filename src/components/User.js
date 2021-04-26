@@ -1,7 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import Spinner from './Spinner';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import Repos from './Repos';
 
 export class User extends Component {
@@ -41,10 +40,7 @@ export class User extends Component {
 
     return (
       <Fragment>
-        <a
-          href='https://silvesterspath.github.io/github_finder/'
-          className='btn btn-light'
-        >
+        <a href='/' className='btn btn-light'>
           Back to Search
         </a>
         Hireable:{' '}

@@ -10,7 +10,7 @@ const Navbar = ({ icon, title }) => {
       </h1>
       <ul>
         <li>
-          <Link to='https://silvesterspath.github.io/github_finder/'>Home</Link>
+          <a href='/'>Home</a>
         </li>
         <li>
           <Link to='/about'>About</Link>

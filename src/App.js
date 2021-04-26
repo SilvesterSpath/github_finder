@@ -114,7 +114,7 @@ class App extends Component {
               <Route exact path='/about' component={About} />
               <Route
                 exact
-                path='/user/:login'
+                path='/:login'
                 render={(props) => (
                   <User
                     {...props}
