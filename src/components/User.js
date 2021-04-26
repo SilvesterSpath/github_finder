@@ -41,7 +41,10 @@ export class User extends Component {
 
     return (
       <Fragment>
-        <a href='/' className='btn btn-light'>
+        <a
+          href='https://silvesterspath.github.io/github_finder'
+          className='btn btn-light'
+        >
           Back to Search
         </a>
         Hireable:{' '}
