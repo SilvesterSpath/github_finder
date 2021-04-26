@@ -41,10 +41,14 @@ export class User extends Component {
 
     return (
       <Fragment>
+<<<<<<< HEAD
         <a
           href='https://silvesterspath.github.io/github_finder'
           className='btn btn-light'
         >
+=======
+        <a href='https://silvesterspath.github.io/github_finder/' className='btn btn-light'>
+>>>>>>> b0874684dcc078bbaef14adde39cff3ea301e1da
           Back to Search
         </a>
         Hireable:{' '}
