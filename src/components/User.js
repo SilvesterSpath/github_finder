@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import Spinner from './Spinner';
 import PropTypes from 'prop-types';
 import Repos from './Repos';
+import { Link } from 'react-router-dom';
 
 const User = ({ getUserRepos, getUser, user, loading, repos, match }) => {
   useEffect(() => {
@@ -31,9 +32,9 @@ const User = ({ getUserRepos, getUser, user, loading, repos, match }) => {
 
   return (
     <Fragment>
-      <a href='/' className='btn btn-light'>
+      <Link to='/' className='btn btn-light'>
         Back to Search
-      </a>
+      </Link>
 
       <div className='card grid-2'>
         <div className='all-center'>
