@@ -75,7 +75,7 @@ const App = () => {
             <Switch>
               <Route
                 exact
-                path='/'
+                path='/github_finder'
                 render={(props) => (
                   <Fragment>
                     <Search
@@ -88,10 +88,10 @@ const App = () => {
                   </Fragment>
                 )}
               />
-              <Route exact path='/about' component={About} />
+              <Route exact path='/github_finder/about' component={About} />
               <Route
                 exact
-                path='/users/:login'
+                path='/github_finder/users/:login'
                 render={(props) => (
                   <User
                     {...props}
