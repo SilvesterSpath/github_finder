@@ -1,27 +1,26 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useContext } from 'react';
 import UserItem from './UserItem';
 import Spinner from './Spinner';
-import PropTypes from 'prop-types';
+import GithubContext from '../context/github/githubContext';
 
-const Users = (props) => {
+const Users = () => {
+  const githubContext = useContext(GithubContext);
+
+  const { loading, users } = githubContext;
+
   return (
     <Fragment>
-      {props.loading ? (
+      {loading ? (
         <Spinner />
       ) : (
         <div style={userStyle}>
-          {props.users.map((i) => (
+          {users.map((i) => (
             <UserItem key={i.id} user={i} />
           ))}
         </div>
       )}
     </Fragment>
   );
-};
-
-Users.propTypes = {
-  loading: PropTypes.bool.isRequired,
-  users: PropTypes.array.isRequired,
 };
 
 const userStyle = {
