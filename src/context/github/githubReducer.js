@@ -1,3 +1,4 @@
+import { act } from 'react-dom/test-utils';
 import {
   SET_LOADING,
   SEARCH_USERS,
@@ -18,6 +19,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         user: action.payload,
+        loading: false,
+      };
+    case GET_REPOS:
+      return {
+        ...state,
+        repos: action.payload,
         loading: false,
       };
     case SET_LOADING:
