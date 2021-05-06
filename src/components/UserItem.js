@@ -14,10 +14,7 @@ const UserItem = ({ user: { login, avatar_url, html_url } }) => {
         />
         <h3>{login}</h3>
         <div>
-          <Link
-            to={`/github_finder/users/${login}`}
-            className='btn btn-dark btn-sm my-1'
-          >
+          <Link to={`/users/${login}`} className='btn btn-dark btn-sm my-1'>
             More
           </Link>
         </div>
