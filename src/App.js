@@ -11,6 +11,7 @@ import AlertState from './context/alert/AlertState';
 import './App.css';
 
 const App = () => {
+  console.log('this');
   return (
     <GithubState>
       <AlertState>
